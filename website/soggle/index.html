@@ -460,7 +460,10 @@
 
         const baseurl = ["https://mirror.guweh.com/"]
 		async function getImagesJSON() {
-            const images = await fetch("https://mirror.guweh.com/images.json").then(response => response.json())    
+			try{
+            const images = await fetch("https://mirror.guweh.com/images.json").then(response => response.json())   
+			}
+			catch(e) {}
         }
 		getImagesJSON()
 
